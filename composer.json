@@ -1,0 +1,37 @@
+{
+    "name": "carbon/colorvalues",
+    "type": "neos-carbon",
+    "description": "A plugin for Neos CMS which provides an editor with color values",
+    "license": "GPL-3.0",
+    "keywords": [
+        "neos",
+        "neoscms",
+        "flow",
+        "color",
+        "editor"
+    ],
+    "authors": [
+        {
+        "name": "Jon Uhlmann",
+        "email": "hello@uhlmann.pro",
+        "homepage": "https://www.uhlmann.pro",
+        "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos-ui": "^7.0"
+    },
+    "archive": {
+        "exclude": [
+            ".github",
+            ".gitattributes",
+            ".gitignore",
+            "CODE_OF_CONDUCT.md"
+        ]
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Carbon.ColorValues"
+        }
+    }
+}

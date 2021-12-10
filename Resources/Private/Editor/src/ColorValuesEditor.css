@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+}
+
+.feedback {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #3f3f3f;
+}
+
+.transparent,
+.checkboard {
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill-opacity=".25"><rect x="200" width="200" height="200" /><rect y="200" width="200" height="200" /></svg>');
+  background-size: 16px 16px;
+}
+
+.transparent {
+  background-color: #fff !important;
+}
+
+.list {
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #3f3f3f;
+}
+
+.item {
+  border: 1px solid #3f3f3f;
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.item:hover,
+.item:hover {
+  box-shadow: 0 0 0 1px #00adee;
+}
+
+.item[disabled],
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.disabled > * {
+  pointer-events: none;
+}
+
+.reset {
+  margin-left: 10px;
+}

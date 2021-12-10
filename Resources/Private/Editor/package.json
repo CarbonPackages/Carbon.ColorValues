@@ -1,0 +1,22 @@
+{
+  "description": "Carbon.ColorValues:ColorValuesEditor",
+  "license": "proprietary",
+  "private": true,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production neos-react-scripts build",
+    "watch": "neos-react-scripts watch"
+  },
+  "devDependencies": {
+    "@neos-project/eslint-config-neos": "^2.3.0",
+    "@neos-project/neos-ui-extensibility": "^7.3.0",
+    "@neos-project/react-ui-components": "^7.3.0",
+    "eslint": "^8.4.1",
+    "webpack": "^4.44.2"
+  },
+  "neos": {
+    "buildTargetDirectory": "../../Public"
+  }
+}

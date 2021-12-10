@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    Ui:
+      resources:
+        javascript:
+          Carbon.ColorValues:
+            resource: resource://Carbon.ColorValues/Public/Plugin.js
+        stylesheets:
+          Carbon.ColorValues:
+            resource: resource://Carbon.ColorValues/Public/Plugin.css
