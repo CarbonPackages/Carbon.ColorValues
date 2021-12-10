@@ -4,14 +4,9 @@
 
 ## Introduction
 
-This package provides a Color Value Editor which can be used
-in Neos CMS.
+This package provides a Color Value Editor which can be used in Neos CMS.
 
-This editor is based on the example in https://github.com/neos/neos-ui-extensibility-examples but
-has some modifications in regards to styling, supports the alpha channel and has a reset button to
-unset a value.
-
-This package was inspired by [Shel.Neos.ColorPicker], but with the difference that not the color values get saved, but the given key. And it just provides a list of colors, nothing more.
+It was inspired by [Shel.Neos.ColorPicker], but with the difference that not the color values get saved, but the given key. And it just provides a list of colors, nothing more.
 
 ## Example
 
