@@ -38,6 +38,8 @@ Add a property of type string and configure the editor as seen in this example:
           editor: "Carbon.ColorValues/Editor"
           editorOptions:
             disabled: false
+            # If set, this color gets displayed if no value is set
+            placeholder: gold
             # Hides the reset button if set to false
             allowEmpty: true
             # Set a custom label for the reset button

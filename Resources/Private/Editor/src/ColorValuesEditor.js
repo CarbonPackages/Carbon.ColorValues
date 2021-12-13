@@ -30,21 +30,37 @@ export default class Editor extends PureComponent {
   static defaultOptions = {
     allowEmpty: true,
     disabled: false,
+    placeholder: null,
     resetLabel: 'Reset',
   };
 
-  getFeedback = (value) => {
-    const isTransparent = value == 'transparent';
+  getFeedbackClass = (value, placeholder) => {
     const hasValue =
       value &&
       Object.prototype.hasOwnProperty.call(this.props.options.values, value);
-    return [
-      style.feedback,
-      isTransparent && style.transparent,
-      !hasValue && style.checkboard,
-    ]
-      .filter((item) => !!item)
-      .join(' ');
+
+    const styleClasses = [style.feedback];
+
+    if (value == 'transparent' || (!hasValue && placeholder == 'transparent')) {
+      styleClasses.push(style.transparent);
+    }
+
+    if (!hasValue && !placeholder) {
+      styleClasses.push(style.checkboard);
+    }
+
+    return styleClasses.filter((item) => !!item).join(' ');
+  };
+
+  getBackgroundColor = (value, placeholder) => {
+    const values = this.props.options.values;
+    if (value && Object.prototype.hasOwnProperty.call(values, value)) {
+      return { backgroundColor: values[value].color };
+    }
+    if (placeholder) {
+      return { backgroundColor: placeholder };
+    }
+    return {};
   };
 
   render() {
@@ -74,12 +90,8 @@ export default class Editor extends PureComponent {
       <div className={options.disabled && style.disabled}>
         <div className={style.wrapper}>
           <div
-            className={this.getFeedback(value)}
-            style={
-              value && values[value]
-                ? { backgroundColor: values[value].color }
-                : {}
-            }
+            className={this.getFeedbackClass(value, options.placeholder)}
+            style={this.getBackgroundColor(value, options.placeholder)}
           ></div>
           {allowEmpty && (
             <div className={style.reset}>
