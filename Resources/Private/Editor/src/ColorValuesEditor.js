@@ -34,33 +34,29 @@ export default class Editor extends PureComponent {
     resetLabel: 'Reset',
   };
 
-  getFeedbackClass = (value, placeholder) => {
+  previewBoxAttributes = (value, placeholder) => {
+    const values = this.props.options.values;
     const hasValue =
-      value &&
-      Object.prototype.hasOwnProperty.call(this.props.options.values, value);
+      value && Object.prototype.hasOwnProperty.call(values, value);
 
-    const styleClasses = [style.feedback];
+    const color = hasValue ? values[value].color : placeholder;
+    const title = hasValue ? values[value].label : null;
+
+    const classNames = [style.feedback];
 
     if (value == 'transparent' || (!hasValue && placeholder == 'transparent')) {
-      styleClasses.push(style.transparent);
+      classNames.push(style.transparent);
     }
 
     if (!hasValue && !placeholder) {
-      styleClasses.push(style.checkboard);
+      classNames.push(style.checkboard);
     }
 
-    return styleClasses.filter((item) => !!item).join(' ');
-  };
-
-  getBackgroundColor = (value, placeholder) => {
-    const values = this.props.options.values;
-    if (value && Object.prototype.hasOwnProperty.call(values, value)) {
-      return { backgroundColor: values[value].color };
-    }
-    if (placeholder) {
-      return { backgroundColor: placeholder };
-    }
-    return {};
+    return {
+      className: classNames.filter((item) => !!item).join(' '),
+      style: { backgroundColor: color },
+      title,
+    };
   };
 
   render() {
@@ -89,10 +85,7 @@ export default class Editor extends PureComponent {
     return (
       <div className={options.disabled && style.disabled}>
         <div className={style.wrapper}>
-          <div
-            className={this.getFeedbackClass(value, options.placeholder)}
-            style={this.getBackgroundColor(value, options.placeholder)}
-          ></div>
+          <div {...this.previewBoxAttributes(value, options.placeholder)}></div>
           {allowEmpty && (
             <div className={style.reset}>
               <IconButton
