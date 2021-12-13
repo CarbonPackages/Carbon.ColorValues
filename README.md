@@ -60,6 +60,8 @@ Foo.Bar:Content.Text:
                 disabled: true
 ```
 
+A special treatment gets the color preview and select field if the color is set to `transparent`; in this case, a checkerboard gets rendered.
+
 ## Contributions
 
 Contributions are very welcome!
