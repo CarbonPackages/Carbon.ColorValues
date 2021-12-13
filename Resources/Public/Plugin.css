@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.ColorValuesEditor__error___3Bz6n {
+  background-color: #ff460d;
+  color: #fff;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px;
+}
+
 .ColorValuesEditor__feedback___3UxEd {
   flex: 1;
   height: 40px;
@@ -38,7 +46,7 @@
 }
 
 .ColorValuesEditor__item___9YGw9:hover,
-.ColorValuesEditor__item___9YGw9:hover {
+.ColorValuesEditor__item___9YGw9:focus {
   box-shadow: 0 0 0 1px #00adee;
 }
 
