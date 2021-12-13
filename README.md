@@ -27,7 +27,7 @@ Then run `composer update` in your project directory.
 Add a property of type string and configure the editor as seen in this example:
 
 ```yaml
-"Foo.Bar:Content.Text":
+Foo.Bar:Content.Text:
   properties:
     color:
       type: string
@@ -35,7 +35,7 @@ Add a property of type string and configure the editor as seen in this example:
         label: Color
         reloadIfChanged: true
         inspector:
-          editor: "Carbon.ColorValues/Editor"
+          editor: Carbon.ColorValues/Editor
           editorOptions:
             disabled: false
             # If set, this color gets displayed if no value is set
@@ -47,7 +47,7 @@ Add a property of type string and configure the editor as seen in this example:
             values:
               main:
                 label: Primary
-                color: "#95c11f"
+                color: '#95c11f'
               gray:
                 label: Gray
                 color: gray
