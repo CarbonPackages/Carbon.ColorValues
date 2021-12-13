@@ -66,10 +66,19 @@ export default class Editor extends PureComponent {
       this.constructor.defaultOptions,
       this.props.options
     );
-    const allowEmpty =
-      options.allowEmpty ||
-      Object.prototype.hasOwnProperty.call(options.values, '');
     const values = options.values;
+
+    if (!values) {
+      return (
+        <div className={style.error}>
+          No color values defined, please add them to your YAML configuration
+        </div>
+      );
+    }
+
+    const allowEmpty =
+      options.allowEmpty || Object.prototype.hasOwnProperty.call(values, '');
+
     const valueArray = [];
 
     for (const key in values) {

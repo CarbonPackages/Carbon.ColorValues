@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.error {
+  background-color: #ff460d;
+  color: #fff;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px;
+}
+
 .feedback {
   flex: 1;
   height: 40px;
