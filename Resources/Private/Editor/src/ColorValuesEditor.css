@@ -38,7 +38,7 @@
 }
 
 .item:hover,
-.item:hover {
+.item:focus {
   box-shadow: 0 0 0 1px #00adee;
 }
 
