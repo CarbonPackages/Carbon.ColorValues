@@ -11,6 +11,7 @@ export default class Editor extends PureComponent {
     options: PropTypes.shape({
       allowEmpty: PropTypes.bool,
       placeholder: PropTypes.string,
+      resetLabel: PropTypes.string,
       disabled: PropTypes.bool,
       values: PropTypes.objectOf(
         PropTypes.shape({
@@ -29,6 +30,7 @@ export default class Editor extends PureComponent {
   static defaultOptions = {
     allowEmpty: true,
     disabled: false,
+    resetLabel: 'Reset',
   };
 
   getFeedback = (value) => {
@@ -84,7 +86,7 @@ export default class Editor extends PureComponent {
               <IconButton
                 style="lighter"
                 icon="times"
-                title="Reset"
+                title={options.resetLabel}
                 onClick={this.onReset}
               />
             </div>

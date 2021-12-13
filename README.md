@@ -40,6 +40,8 @@ Add a property of type string and configure the editor as seen in this example:
             disabled: false
             # Hides the reset button if set to false
             allowEmpty: true
+            # Set a custom label for the reset button
+            resetLabel: Custom label
             values:
               main:
                 label: Primary
