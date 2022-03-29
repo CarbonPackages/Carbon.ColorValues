@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "neos/neos-ui": "^5.3 || ^7.0"
+        "neos/neos-ui": "^5.3 || ^7.0 || ^8.0"
     },
     "archive": {
         "exclude": [
