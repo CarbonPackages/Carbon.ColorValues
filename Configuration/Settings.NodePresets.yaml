@@ -1,0 +1,748 @@
+Neos:
+  Neos:
+    nodeTypes:
+      presets:
+        properties:
+          Carbon:
+            ColorValues:
+              tailwind:
+                type: string
+                ui:
+                  inspector:
+                    editor: 'Carbon.ColorValues/Editor'
+                    editorOptions:
+                      values:
+                        blackWhite:
+                          label: 'Black & White'
+                        '#000000':
+                          label: Black
+                          color: '#000000'
+                        '#ffffff':
+                          label: White
+                          color: '#ffffff'
+
+                        slate:
+                          label: Slate
+                        '#f8fafc':
+                          label: Slate - 50
+                          color: '#f8fafc'
+                        '#f1f5f9':
+                          label: Slate - 100
+                          color: '#f1f5f9'
+                        '#e2e8f0':
+                          label: Slate - 200
+                          color: '#e2e8f0'
+                        '#cbd5e1':
+                          label: Slate - 300
+                          color: '#cbd5e1'
+                        '#94a3b8':
+                          label: Slate - 400
+                          color: '#94a3b8'
+                        '#64748b':
+                          label: Slate - 500
+                          color: '#64748b'
+                        '#475569':
+                          label: Slate - 600
+                          color: '#475569'
+                        '#334155':
+                          label: Slate - 700
+                          color: '#334155'
+                        '#1e293b':
+                          label: Slate - 800
+                          color: '#1e293b'
+                        '#0f172a':
+                          label: Slate - 900
+                          color: '#0f172a'
+
+                        gray:
+                          label: Gray
+                        '#f9fafb':
+                          label: Gray - 50
+                          color: '#f9fafb'
+                        '#f3f4f6':
+                          label: Gray - 100
+                          color: '#f3f4f6'
+                        '#e5e7eb':
+                          label: Gray - 200
+                          color: '#e5e7eb'
+                        '#d1d5db':
+                          label: Gray - 300
+                          color: '#d1d5db'
+                        '#9ca3af':
+                          label: Gray - 400
+                          color: '#9ca3af'
+                        '#6b7280':
+                          label: Gray - 500
+                          color: '#6b7280'
+                        '#4b5563':
+                          label: Gray - 600
+                          color: '#4b5563'
+                        '#374151':
+                          label: Gray - 700
+                          color: '#374151'
+                        '#1f2937':
+                          label: Gray - 800
+                          color: '#1f2937'
+                        '#111827':
+                          label: Gray - 900
+                          color: '#111827'
+
+                        zinc:
+                          label: Zinc
+                        '#fafafa':
+                          label: Zinc - 50
+                          color: '#fafafa'
+                        '#f4f4f5':
+                          label: Zinc - 100
+                          color: '#f4f4f5'
+                        '#e4e4e7':
+                          label: Zinc - 200
+                          color: '#e4e4e7'
+                        '#d4d4d8':
+                          label: Zinc - 300
+                          color: '#d4d4d8'
+                        '#a1a1aa':
+                          label: Zinc - 400
+                          color: '#a1a1aa'
+                        '#71717a':
+                          label: Zinc - 500
+                          color: '#71717a'
+                        '#52525b':
+                          label: Zinc - 600
+                          color: '#52525b'
+                        '#3f3f46':
+                          label: Zinc - 700
+                          color: '#3f3f46'
+                        '#27272a':
+                          label: Zinc - 800
+                          color: '#27272a'
+                        '#18181b':
+                          label: Zinc - 900
+                          color: '#18181b'
+
+                        neutral:
+                          label: Neutral
+                        # '#fafafa':
+                        #   label: Neutral - 50
+                        #   color: '#fafafa'
+                        '#f5f5f5':
+                          label: Neutral - 100
+                          color: '#f5f5f5'
+                        '#e5e5e5':
+                          label: Neutral - 200
+                          color: '#e5e5e5'
+                        '#d4d4d4':
+                          label: Neutral - 300
+                          color: '#d4d4d4'
+                        '#a3a3a3':
+                          label: Neutral - 400
+                          color: '#a3a3a3'
+                        '#737373':
+                          label: Neutral - 500
+                          color: '#737373'
+                        '#525252':
+                          label: Neutral - 600
+                          color: '#525252'
+                        '#404040':
+                          label: Neutral - 700
+                          color: '#404040'
+                        '#262626':
+                          label: Neutral - 800
+                          color: '#262626'
+                        '#171717':
+                          label: Neutral - 900
+                          color: '#171717'
+
+                        stone:
+                          label: Stone
+                        '#fafaf9':
+                          label: Stone - 50
+                          color: '#fafaf9'
+                        '#f5f5f4':
+                          label: Stone - 100
+                          color: '#f5f5f4'
+                        '#e7e5e4':
+                          label: Stone - 200
+                          color: '#e7e5e4'
+                        '#d6d3d1':
+                          label: Stone - 300
+                          color: '#d6d3d1'
+                        '#a8a29e':
+                          label: Stone - 400
+                          color: '#a8a29e'
+                        '#78716c':
+                          label: Stone - 500
+                          color: '#78716c'
+                        '#57534e':
+                          label: Stone - 600
+                          color: '#57534e'
+                        '#44403c':
+                          label: Stone - 700
+                          color: '#44403c'
+                        '#292524':
+                          label: Stone - 800
+                          color: '#292524'
+                        '#1c1917':
+                          label: Stone - 900
+                          color: '#1c1917'
+
+                        red:
+                          label: Red
+                        '#fef2f2':
+                          label: Red - 50
+                          color: '#fef2f2'
+                        '#fee2e2':
+                          label: Red - 100
+                          color: '#fee2e2'
+                        '#fecaca':
+                          label: Red - 200
+                          color: '#fecaca'
+                        '#fca5a5':
+                          label: Red - 300
+                          color: '#fca5a5'
+                        '#f87171':
+                          label: Red - 400
+                          color: '#f87171'
+                        '#ef4444':
+                          label: Red - 500
+                          color: '#ef4444'
+                        '#dc2626':
+                          label: Red - 600
+                          color: '#dc2626'
+                        '#b91c1c':
+                          label: Red - 700
+                          color: '#b91c1c'
+                        '#991b1b':
+                          label: Red - 800
+                          color: '#991b1b'
+                        '#7f1d1d':
+                          label: Red - 900
+                          color: '#7f1d1d'
+
+                        orange:
+                          label: Orange
+                        '#fff7ed':
+                          label: Orange - 50
+                          color: '#fff7ed'
+                        '#ffedd5':
+                          label: Orange - 100
+                          color: '#ffedd5'
+                        '#fed7aa':
+                          label: Orange - 200
+                          color: '#fed7aa'
+                        '#fdba74':
+                          label: Orange - 300
+                          color: '#fdba74'
+                        '#fb923c':
+                          label: Orange - 400
+                          color: '#fb923c'
+                        '#f97316':
+                          label: Orange - 500
+                          color: '#f97316'
+                        '#ea580c':
+                          label: Orange - 600
+                          color: '#ea580c'
+                        '#c2410c':
+                          label: Orange - 700
+                          color: '#c2410c'
+                        '#9a3412':
+                          label: Orange - 800
+                          color: '#9a3412'
+                        '#7c2d12':
+                          label: Orange - 900
+                          color: '#7c2d12'
+
+                        amber:
+                          label: Amber
+                        '#fffbeb':
+                          label: Amber - 50
+                          color: '#fffbeb'
+                        '#fef3c7':
+                          label: Amber - 100
+                          color: '#fef3c7'
+                        '#fde68a':
+                          label: Amber - 200
+                          color: '#fde68a'
+                        '#fcd34d':
+                          label: Amber - 300
+                          color: '#fcd34d'
+                        '#fbbf24':
+                          label: Amber - 400
+                          color: '#fbbf24'
+                        '#f59e0b':
+                          label: Amber - 500
+                          color: '#f59e0b'
+                        '#d97706':
+                          label: Amber - 600
+                          color: '#d97706'
+                        '#b45309':
+                          label: Amber - 700
+                          color: '#b45309'
+                        '#92400e':
+                          label: Amber - 800
+                          color: '#92400e'
+                        '#78350f':
+                          label: Amber - 900
+                          color: '#78350f'
+
+                        yellow:
+                          label: Yellow
+                        '#fefce8':
+                          label: Yellow - 50
+                          color: '#fefce8'
+                        '#fef9c3':
+                          label: Yellow - 100
+                          color: '#fef9c3'
+                        '#fef08a':
+                          label: Yellow - 200
+                          color: '#fef08a'
+                        '#fde047':
+                          label: Yellow - 300
+                          color: '#fde047'
+                        '#facc15':
+                          label: Yellow - 400
+                          color: '#facc15'
+                        '#eab308':
+                          label: Yellow - 500
+                          color: '#eab308'
+                        '#ca8a04':
+                          label: Yellow - 600
+                          color: '#ca8a04'
+                        '#a16207':
+                          label: Yellow - 700
+                          color: '#a16207'
+                        '#854d0e':
+                          label: Yellow - 800
+                          color: '#854d0e'
+                        '#713f12':
+                          label: Yellow - 900
+                          color: '#713f12'
+
+                        lime:
+                          label: Lime
+                        '#f7fee7':
+                          label: Lime - 50
+                          color: '#f7fee7'
+                        '#ecfccb':
+                          label: Lime - 100
+                          color: '#ecfccb'
+                        '#d9f99d':
+                          label: Lime - 200
+                          color: '#d9f99d'
+                        '#bef264':
+                          label: Lime - 300
+                          color: '#bef264'
+                        '#a3e635':
+                          label: Lime - 400
+                          color: '#a3e635'
+                        '#84cc16':
+                          label: Lime - 500
+                          color: '#84cc16'
+                        '#65a30d':
+                          label: Lime - 600
+                          color: '#65a30d'
+                        '#4d7c0f':
+                          label: Lime - 700
+                          color: '#4d7c0f'
+                        '#3f6212':
+                          label: Lime - 800
+                          color: '#3f6212'
+                        '#365314':
+                          label: Lime - 900
+                          color: '#365314'
+
+                        green:
+                          label: Green
+                        '#f0fdf4':
+                          label: Green - 50
+                          color: '#f0fdf4'
+                        '#dcfce7':
+                          label: Green - 100
+                          color: '#dcfce7'
+                        '#bbf7d0':
+                          label: Green - 200
+                          color: '#bbf7d0'
+                        '#86efac':
+                          label: Green - 300
+                          color: '#86efac'
+                        '#4ade80':
+                          label: Green - 400
+                          color: '#4ade80'
+                        '#22c55e':
+                          label: Green - 500
+                          color: '#22c55e'
+                        '#16a34a':
+                          label: Green - 600
+                          color: '#16a34a'
+                        '#15803d':
+                          label: Green - 700
+                          color: '#15803d'
+                        '#166534':
+                          label: Green - 800
+                          color: '#166534'
+                        '#14532d':
+                          label: Green - 900
+                          color: '#14532d'
+
+                        emerald:
+                          label: Emerald
+                        '#ecfdf5':
+                          label: Emerald - 50
+                          color: '#ecfdf5'
+                        '#d1fae5':
+                          label: Emerald - 100
+                          color: '#d1fae5'
+                        '#a7f3d0':
+                          label: Emerald - 200
+                          color: '#a7f3d0'
+                        '#6ee7b7':
+                          label: Emerald - 300
+                          color: '#6ee7b7'
+                        '#34d399':
+                          label: Emerald - 400
+                          color: '#34d399'
+                        '#10b981':
+                          label: Emerald - 500
+                          color: '#10b981'
+                        '#059669':
+                          label: Emerald - 600
+                          color: '#059669'
+                        '#047857':
+                          label: Emerald - 700
+                          color: '#047857'
+                        '#065f46':
+                          label: Emerald - 800
+                          color: '#065f46'
+                        '#064e3b':
+                          label: Emerald - 900
+                          color: '#064e3b'
+
+                        teal:
+                          label: Teal
+                        '#f0fdfa':
+                          label: Teal - 50
+                          color: '#f0fdfa'
+                        '#ccfbf1':
+                          label: Teal - 100
+                          color: '#ccfbf1'
+                        '#99f6e4':
+                          label: Teal - 200
+                          color: '#99f6e4'
+                        '#5eead4':
+                          label: Teal - 300
+                          color: '#5eead4'
+                        '#2dd4bf':
+                          label: Teal - 400
+                          color: '#2dd4bf'
+                        '#14b8a6':
+                          label: Teal - 500
+                          color: '#14b8a6'
+                        '#0d9488':
+                          label: Teal - 600
+                          color: '#0d9488'
+                        '#0f766e':
+                          label: Teal - 700
+                          color: '#0f766e'
+                        '#115e59':
+                          label: Teal - 800
+                          color: '#115e59'
+                        '#134e4a':
+                          label: Teal - 900
+                          color: '#134e4a'
+
+                        cyan:
+                          label: Cyan
+                        '#ecfeff':
+                          label: Cyan - 50
+                          color: '#ecfeff'
+                        '#cffafe':
+                          label: Cyan - 100
+                          color: '#cffafe'
+                        '#a5f3fc':
+                          label: Cyan - 200
+                          color: '#a5f3fc'
+                        '#67e8f9':
+                          label: Cyan - 300
+                          color: '#67e8f9'
+                        '#22d3ee':
+                          label: Cyan - 400
+                          color: '#22d3ee'
+                        '#06b6d4':
+                          label: Cyan - 500
+                          color: '#06b6d4'
+                        '#0891b2':
+                          label: Cyan - 600
+                          color: '#0891b2'
+                        '#0e7490':
+                          label: Cyan - 700
+                          color: '#0e7490'
+                        '#155e75':
+                          label: Cyan - 800
+                          color: '#155e75'
+                        '#164e63':
+                          label: Cyan - 900
+                          color: '#164e63'
+
+                        sky:
+                          label: Sky
+                        '#f0f9ff':
+                          label: Sky - 50
+                          color: '#f0f9ff'
+                        '#e0f2fe':
+                          label: Sky - 100
+                          color: '#e0f2fe'
+                        '#bae6fd':
+                          label: Sky - 200
+                          color: '#bae6fd'
+                        '#7dd3fc':
+                          label: Sky - 300
+                          color: '#7dd3fc'
+                        '#38bdf8':
+                          label: Sky - 400
+                          color: '#38bdf8'
+                        '#0ea5e9':
+                          label: Sky - 500
+                          color: '#0ea5e9'
+                        '#0284c7':
+                          label: Sky - 600
+                          color: '#0284c7'
+                        '#0369a1':
+                          label: Sky - 700
+                          color: '#0369a1'
+                        '#075985':
+                          label: Sky - 800
+                          color: '#075985'
+                        '#0c4a6e':
+                          label: Sky - 900
+                          color: '#0c4a6e'
+
+                        blue:
+                          label: Blue
+                        '#eff6ff':
+                          label: Blue - 50
+                          color: '#eff6ff'
+                        '#dbeafe':
+                          label: Blue - 100
+                          color: '#dbeafe'
+                        '#bfdbfe':
+                          label: Blue - 200
+                          color: '#bfdbfe'
+                        '#93c5fd':
+                          label: Blue - 300
+                          color: '#93c5fd'
+                        '#60a5fa':
+                          label: Blue - 400
+                          color: '#60a5fa'
+                        '#3b82f6':
+                          label: Blue - 500
+                          color: '#3b82f6'
+                        '#2563eb':
+                          label: Blue - 600
+                          color: '#2563eb'
+                        '#1d4ed8':
+                          label: Blue - 700
+                          color: '#1d4ed8'
+                        '#1e40af':
+                          label: Blue - 800
+                          color: '#1e40af'
+                        '#1e3a8a':
+                          label: Blue - 900
+                          color: '#1e3a8a'
+
+                        indigo:
+                          label: Indigo
+                        '#eef2ff':
+                          label: Indigo - 50
+                          color: '#eef2ff'
+                        '#e0e7ff':
+                          label: Indigo - 100
+                          color: '#e0e7ff'
+                        '#c7d2fe':
+                          label: Indigo - 200
+                          color: '#c7d2fe'
+                        '#a5b4fc':
+                          label: Indigo - 300
+                          color: '#a5b4fc'
+                        '#818cf8':
+                          label: Indigo - 400
+                          color: '#818cf8'
+                        '#6366f1':
+                          label: Indigo - 500
+                          color: '#6366f1'
+                        '#4f46e5':
+                          label: Indigo - 600
+                          color: '#4f46e5'
+                        '#4338ca':
+                          label: Indigo - 700
+                          color: '#4338ca'
+                        '#3730a3':
+                          label: Indigo - 800
+                          color: '#3730a3'
+                        '#312e81':
+                          label: Indigo - 900
+                          color: '#312e81'
+
+                        violet:
+                          label: Violet
+                        '#f5f3ff':
+                          label: Violet - 50
+                          color: '#f5f3ff'
+                        '#ede9fe':
+                          label: Violet - 100
+                          color: '#ede9fe'
+                        '#ddd6fe':
+                          label: Violet - 200
+                          color: '#ddd6fe'
+                        '#c4b5fd':
+                          label: Violet - 300
+                          color: '#c4b5fd'
+                        '#a78bfa':
+                          label: Violet - 400
+                          color: '#a78bfa'
+                        '#8b5cf6':
+                          label: Violet - 500
+                          color: '#8b5cf6'
+                        '#7c3aed':
+                          label: Violet - 600
+                          color: '#7c3aed'
+                        '#6d28d9':
+                          label: Violet - 700
+                          color: '#6d28d9'
+                        '#5b21b6':
+                          label: Violet - 800
+                          color: '#5b21b6'
+                        '#4c1d95':
+                          label: Violet - 900
+                          color: '#4c1d95'
+
+                        purple:
+                          label: Purple
+                        '#faf5ff':
+                          label: Purple - 50
+                          color: '#faf5ff'
+                        '#f3e8ff':
+                          label: Purple - 100
+                          color: '#f3e8ff'
+                        '#e9d5ff':
+                          label: Purple - 200
+                          color: '#e9d5ff'
+                        '#d8b4fe':
+                          label: Purple - 300
+                          color: '#d8b4fe'
+                        '#c084fc':
+                          label: Purple - 400
+                          color: '#c084fc'
+                        '#a855f7':
+                          label: Purple - 500
+                          color: '#a855f7'
+                        '#9333ea':
+                          label: Purple - 600
+                          color: '#9333ea'
+                        '#7e22ce':
+                          label: Purple - 700
+                          color: '#7e22ce'
+                        '#6b21a8':
+                          label: Purple - 800
+                          color: '#6b21a8'
+                        '#581c87':
+                          label: Purple - 900
+                          color: '#581c87'
+
+                        fuchsia:
+                          label: Fuchsia
+                        '#fdf4ff':
+                          label: Fuchsia - 50
+                          color: '#fdf4ff'
+                        '#fae8ff':
+                          label: Fuchsia - 100
+                          color: '#fae8ff'
+                        '#f5d0fe':
+                          label: Fuchsia - 200
+                          color: '#f5d0fe'
+                        '#f0abfc':
+                          label: Fuchsia - 300
+                          color: '#f0abfc'
+                        '#e879f9':
+                          label: Fuchsia - 400
+                          color: '#e879f9'
+                        '#d946ef':
+                          label: Fuchsia - 500
+                          color: '#d946ef'
+                        '#c026d3':
+                          label: Fuchsia - 600
+                          color: '#c026d3'
+                        '#a21caf':
+                          label: Fuchsia - 700
+                          color: '#a21caf'
+                        '#86198f':
+                          label: Fuchsia - 800
+                          color: '#86198f'
+                        '#701a75':
+                          label: Fuchsia - 900
+                          color: '#701a75'
+
+                        pink:
+                          label: Pink
+                        '#fdf2f8':
+                          label: Pink - 50
+                          color: '#fdf2f8'
+                        '#fce7f3':
+                          label: Pink - 100
+                          color: '#fce7f3'
+                        '#fbcfe8':
+                          label: Pink - 200
+                          color: '#fbcfe8'
+                        '#f9a8d4':
+                          label: Pink - 300
+                          color: '#f9a8d4'
+                        '#f472b6':
+                          label: Pink - 400
+                          color: '#f472b6'
+                        '#ec4899':
+                          label: Pink - 500
+                          color: '#ec4899'
+                        '#db2777':
+                          label: Pink - 600
+                          color: '#db2777'
+                        '#be185d':
+                          label: Pink - 700
+                          color: '#be185d'
+                        '#9d174d':
+                          label: Pink - 800
+                          color: '#9d174d'
+                        '#831843':
+                          label: Pink - 900
+                          color: '#831843'
+
+                        rose:
+                          label: Rose
+                        '#fff1f2':
+                          label: Rose - 50
+                          color: '#fff1f2'
+                        '#ffe4e6':
+                          label: Rose - 100
+                          color: '#ffe4e6'
+                        '#fecdd3':
+                          label: Rose - 200
+                          color: '#fecdd3'
+                        '#fda4af':
+                          label: Rose - 300
+                          color: '#fda4af'
+                        '#fb7185':
+                          label: Rose - 400
+                          color: '#fb7185'
+                        '#f43f5e':
+                          label: Rose - 500
+                          color: '#f43f5e'
+                        '#e11d48':
+                          label: Rose - 600
+                          color: '#e11d48'
+                        '#be123c':
+                          label: Rose - 700
+                          color: '#be123c'
+                        '#9f1239':
+                          label: Rose - 800
+                          color: '#9f1239'
+                        '#881337':
+                          label: Rose - 900
+                          color: '#881337'
