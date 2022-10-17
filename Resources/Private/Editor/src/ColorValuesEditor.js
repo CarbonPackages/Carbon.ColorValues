@@ -107,18 +107,22 @@ export default class Editor extends PureComponent {
           )}
         </div>
         <div className={style.list}>
-          {valueArray.map((item) => (
+          {valueArray.map((item) => {
+            return item.color ? (
             <button
               className={[
                 style.item,
-                item.color == 'transparent' && style.transparent,
-              ].join(' ')}
+                  item.color == "transparent" && style.transparent,
+                ].join(" ")}
               disabled={item.disabled}
               style={{ backgroundColor: item.color }}
               title={item.label}
               onClick={() => commit(item.key)}
             ></button>
-          ))}
+            ) : (
+              <div className={style.label}>{item.label}</div>
+            );
+          })}
         </div>
       </div>
     );
