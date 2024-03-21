@@ -26,7 +26,7 @@ function Editor(props) {
     const { commit, value, highlight, i18nRegistry } = props;
     const { disabled, values } = options;
 
-    const previewBoxAttributes = (value, placeholder) => {
+    const previewBoxAttributes = (value, highlight, placeholder) => {
         const hasValue = value && Object.prototype.hasOwnProperty.call(values, value);
         const color = hasValue ? values[value].color : placeholder;
         const title = hasValue ? i18nRegistry.translate(values[value].label) : null;
@@ -38,6 +38,10 @@ function Editor(props) {
 
         if (!hasValue && !placeholder) {
             classNames.push(style.checkboard);
+        }
+
+        if (highlight) {
+            classNames.push(style.highlight);
         }
 
         return {
@@ -64,10 +68,12 @@ function Editor(props) {
         });
     }
 
+    const fixedButton = valueArray.length > 9;
+
     return (
         <div className={options.disabled && style.disabled}>
             <div className={style.wrapper}>
-                <div {...previewBoxAttributes(value, options.placeholder)}></div>
+                <div {...previewBoxAttributes(value, highlight, options.placeholder)}></div>
                 {allowEmpty && (
                     <div className={style.reset}>
                         <IconButton
@@ -80,17 +86,26 @@ function Editor(props) {
                 )}
             </div>
             <div className={style.list}>
-                {valueArray.map((item) => {
+                {valueArray.map((item, index) => {
                     return item.color ? (
                         <button
-                            className={[style.item, item.color == "transparent" && style.transparent].join(" ")}
+                            key={index}
+                            className={[
+                                style.item,
+                                item.color == "transparent" && style.transparent,
+                                fixedButton && style.itemFixed,
+                            ]
+                                .filter((item) => !!item)
+                                .join(" ")}
                             disabled={item.disabled}
                             style={{ backgroundColor: item.color }}
                             title={item.label}
                             onClick={() => commit(item.key)}
                         ></button>
                     ) : (
-                        <div className={style.label}>{item.label}</div>
+                        <div key={index} className={style.label}>
+                            {item.label}
+                        </div>
                     );
                 })}
             </div>

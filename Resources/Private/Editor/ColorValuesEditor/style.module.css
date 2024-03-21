@@ -10,10 +10,15 @@
     padding: 10px 16px;
 }
 
+.highlight {
+    box-shadow: 0 0 0 2px #ff8700;
+}
+
 .feedback {
     flex: 1;
     height: 40px;
     border: 1px solid #3f3f3f;
+    border-radius: 2px;
 }
 
 .transparent,
@@ -30,11 +35,11 @@
     flex: 1;
     position: relative;
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 10px;
-    padding-top: 15px;
+    gap: 8px;
+    margin-top: 8px;
+    padding-top: 8px;
     border-top: 1px solid #3f3f3f;
 }
 
@@ -46,10 +51,14 @@
 .item {
     border: 1px solid #3f3f3f;
     border-radius: 2px;
-    width: 18px;
-    height: 18px;
+    height: 24px;
     cursor: pointer;
-    flex: 0 0 18px;
+    flex: 1 0 24px;
+    padding: 0;
+}
+
+.itemFixed {
+    flex-grow: 0;
 }
 
 .item:hover,
