@@ -1,14 +1,16 @@
 import esbuild from "esbuild";
-import extensibilityMap from "@neos-project/neos-ui-extensibility/extensibilityMap.json" assert { type: "json" };
+import extensibilityMap from "@neos-project/neos-ui-extensibility/extensibilityMap.json" with { type: "json" };
 import { cssModules } from "esbuild-plugin-lightningcss-modules";
 
+const dev = !process.argv.includes("--production");
+const watch = process.argv.includes("--watch");
 
 /** @type {import("esbuild").BuildOptions} */
 const options = {
     logLevel: "info",
     bundle: true,
-    minify: process.argv.includes("--production"),
-    sourcemap: true,
+    minify: !dev,
+    sourcemap: dev,
     target: "es2020",
     format: "iife",
     legalComments: "none",
@@ -32,7 +34,7 @@ const options = {
     ],
 };
 
-if (process.argv.includes("--watch")) {
+if (watch) {
     esbuild.context(options).then((ctx) => ctx.watch());
 } else {
     esbuild.build(options);
